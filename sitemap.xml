@@ -10,5 +10,6 @@
   <url><loc>https://www.dein-kuemmerer.de/ueber-uns.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.dein-kuemmerer.de/mehr-infos.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.dein-kuemmerer.de/kontakt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dein-kuemmerer.de/newsletter-sommer.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.dein-kuemmerer.de/impressum.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
