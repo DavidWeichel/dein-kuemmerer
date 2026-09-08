@@ -478,11 +478,21 @@ footer ul li a:hover{color:var(--terra);}
   text-decoration-thickness:3px;text-underline-offset:4px;}
 .info-toast-alert p{font-size:.94rem;line-height:1.45;margin:8px 0 0;opacity:.96;}
 .info-toast-alert p strong{color:#FFD966;}
+.info-toast-call{display:inline-flex;align-items:center;gap:6px;background:#FFD966;
+  color:#221E17;font-weight:800;font-size:1.05rem;padding:11px 20px;border-radius:30px;
+  text-decoration:none;margin-top:14px;box-shadow:0 8px 20px -8px #00000066;
+  transition:transform .2s,box-shadow .2s;}
+.info-toast-call:hover{transform:translateY(-2px);box-shadow:0 12px 24px -8px #00000088;}
 .info-toast-close{position:absolute;right:12px;top:12px;background:#ffffff26;
   border:none;color:#fff;width:32px;height:32px;border-radius:50%;
   cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;
   justify-content:center;transition:background .2s,transform .2s;}
 .info-toast-close:hover{background:#ffffff44;transform:rotate(90deg);}
+.info-toast-alert .toast-phone{display:inline-block;background:#FFD966;color:#221E17;
+  font-weight:800;padding:4px 12px;border-radius:20px;text-decoration:none;
+  margin:2px 0;white-space:nowrap;transition:transform .15s,box-shadow .15s;}
+.info-toast-alert .toast-phone:hover{transform:scale(1.04);box-shadow:0 6px 16px -4px #22111144;}
+
 .info-toast-good{padding:16px 20px;background:#FBF5EA;}
 .info-toast-good .good-label{display:inline-block;background:#2C5B52;color:#FBF5EA;
   font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
@@ -694,9 +704,10 @@ footer ul li a:hover{color:var(--terra);}
 <!-- INFO SLIDE-IN TOAST -->
 <aside class="info-toast" id="infoToast" role="alert" aria-live="polite">
   <div class="info-toast-alert">
-    <span class="alert-label">Wichtige Info</span>
-    <h3>Diese Woche <em>NICHT</em> an den gewohnten Plätzen!</h3>
-    <p>Wir bitten um Verständnis. Ab <strong>Donnerstag, 17.09.</strong> sind wir wieder wie gewohnt für euch da.</p>
+    <span class="alert-label">Kurze Info</span>
+    <h3>Kurze Info: Diese Woche stehen wir <em>NICHT</em> an den gewohnten Plätzen.</h3>
+    <p>Kein Grund zur Sorge – <strong>telefonisch sind wir voll für euch erreichbar</strong> unter <a href="tel:015511441969" class="toast-phone">📞 0155 11441969</a>. Ab <strong>Donnerstag, 17.09.</strong> findet ihr uns wieder wie gewohnt an unseren Standorten. Danke für euer Verständnis – bis bald!</p>
+    <a href="tel:015511441969" class="info-toast-call">📞 0155 11441969</a>
     <button class="info-toast-close" onclick="document.getElementById('infoToast').classList.add('hidden');sessionStorage.setItem('kuemmerer-toast-closed','1');" aria-label="Hinweis schließen">×</button>
   </div>
   <div class="info-toast-good">
