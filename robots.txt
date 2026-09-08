@@ -1,29 +1,4 @@
-# robots.txt – Der Kümmerer im Oberland
-
-# Alle klassischen Suchmaschinen: vollständiger Zugriff erlaubt
 User-agent: *
 Allow: /
 
-# KI-Crawler ausdrücklich erlauben (für ChatGPT, Perplexity, Google AI etc.)
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-Sitemap: https://www.xn--der-kmmerer-xhb.de/sitemap.xml
+Sitemap: https://www.dein-kuemmerer.de/sitemap.xml
