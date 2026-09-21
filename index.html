@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mobile Fahrradwerkstatt Oberland – Schäftlarn, Berg &amp; Wolfratshausen | Der Kümmerer</title>
-<meta name="description" content="Mobile Fahrrad- und E-Bike-Werkstatt im Oberland: donnerstags in Hohenschäftlarn, samstags in Berg am Starnberger See – und nach Absprache direkt bei Ihnen.">
+<meta name="description" content="Mobile Fahrrad- und E-Bike-Werkstatt im Oberland: vier feste Standorte pro Woche – und nach Absprache direkt bei Ihnen.">
 <link rel="canonical" href="https://www.dein-kuemmerer.de/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Der Kümmerer im Oberland">
@@ -18,14 +18,14 @@
 <meta property="og:site_name" content="Der Kümmerer im Oberland">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Mobile Fahrradwerkstatt Oberland – Schäftlarn, Berg &amp; Wolfratshausen | Der Kümmerer">
-<meta property="og:description" content="Mobile Fahrrad- und E-Bike-Werkstatt im Oberland: donnerstags in Hohenschäftlarn, samstags in Berg am Starnberger See – und nach Absprache direkt bei Ihnen.">
+<meta property="og:description" content="Mobile Fahrrad- und E-Bike-Werkstatt im Oberland: vier feste Standorte pro Woche – und nach Absprache direkt bei Ihnen.">
 <meta property="og:url" content="https://www.dein-kuemmerer.de/">
 <meta property="og:image" content="https://www.dein-kuemmerer.de/og-bild.jpg">
 <meta property="og:image:alt" content="Der Kümmerer im Oberland">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mobile Fahrradwerkstatt Oberland – Schäftlarn, Berg &amp; Wolfratshausen | Der Kümmerer">
-<meta name="twitter:description" content="Mobile Fahrrad- und E-Bike-Werkstatt im Oberland: donnerstags in Hohenschäftlarn, samstags in Berg am Starnberger See – und nach Absprache direkt bei Ihnen.">
+<meta name="twitter:description" content="Mobile Fahrrad- und E-Bike-Werkstatt im Oberland: vier feste Standorte pro Woche – und nach Absprache direkt bei Ihnen.">
 <meta name="twitter:image" content="https://www.dein-kuemmerer.de/og-bild.jpg">
 <script type="application/ld+json">
 {
@@ -96,6 +96,46 @@
     },
     {
       "@type": "Place",
+      "name": "Der Kümmerer – Mobile Fahrradwerkstatt Baierbrunn",
+      "description": "Fester Termin der mobilen Fahrradwerkstatt auf dem Wochenmarkt Baierbrunn.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wochenmarkt Baierbrunn",
+        "postalCode": "82065",
+        "addressLocality": "Baierbrunn",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {"@type": "GeoCoordinates", "latitude": 48.0206, "longitude": 11.4873},
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Wednesday",
+        "opens": "13:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Der Kümmerer – Mobile Fahrradwerkstatt Icking",
+      "description": "Fester Termin der mobilen Fahrradwerkstatt am Gymnasium Icking.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beim Gymnasium Icking",
+        "postalCode": "82057",
+        "addressLocality": "Icking",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {"@type": "GeoCoordinates", "latitude": 47.9505, "longitude": 11.4266},
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Friday",
+        "opens": "13:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "Place",
       "name": "Der Kümmerer – Mobile Fahrradwerkstatt Berg am Starnberger See",
       "description": "Feste Markttermine der mobilen Fahrradwerkstatt am Strandhotel & Strandbar Berg.",
       "address": {
@@ -145,7 +185,7 @@
       "name": "Wo finde ich die mobile Fahrradwerkstatt im Oberland?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Donnerstags von 14 bis 18 Uhr am Bahnhofsplatz in Hohenschäftlarn und samstags von 9 bis 14 Uhr beim Strandhotel in Berg am Starnberger See. An allen anderen Tagen kommen wir nach Absprache zu Ihnen."
+        "text": "Mittwochs von 13 bis 18 Uhr in Baierbrunn, donnerstags von 14 bis 18 Uhr in Hohenschäftlarn, freitags von 13 bis 18 Uhr in Icking und samstags von 9 bis 14 Uhr in Berg am Starnberger See. An allen anderen Tagen kommen wir nach Absprache zu Ihnen."
       }
     },
     {
@@ -769,6 +809,51 @@ footer ul li a:hover{color:var(--terra);}
   font-family:'Spline Sans',sans-serif;font-weight:600;font-size:14.5px;transition:background .2s;}
 .social-links a:hover{background:#FBF5EA26;}
 
+
+/* --- Slide-in Info --- */
+#slideinfo{position:fixed;right:18px;bottom:84px;z-index:950;max-width:360px;background:#fff;
+  border:1.5px solid var(--line);border-left:5px solid var(--terra);border-radius:16px;
+  box-shadow:0 24px 54px -20px rgba(34,30,23,.4);padding:20px 20px 18px;
+  opacity:0;visibility:hidden;transform:translateY(16px);transition:all .35s ease;}
+#slideinfo.show{opacity:1;visibility:visible;transform:translateY(0);}
+#slideinfo .si-close{position:absolute;top:8px;right:10px;border:none;background:none;
+  font-size:20px;line-height:1;cursor:pointer;color:var(--ink-soft);padding:4px;}
+#slideinfo .si-tag{font-family:'Spline Sans',sans-serif;font-size:11.5px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--terra);}
+#slideinfo h4{font-family:'Fraunces',serif;font-size:1.08rem;line-height:1.3;margin:6px 0 6px;}
+#slideinfo p{font-size:13.8px;line-height:1.6;color:var(--ink-soft);margin:0 0 8px;}
+#slideinfo a.si-link{font-family:'Spline Sans',sans-serif;font-weight:700;font-size:13.8px;
+  color:var(--terra-deep);}
+#slideinfo .si-neu{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);}
+#slideinfo .si-neu .si-tag{color:#3F7A4F;}
+@media(max-width:520px){#slideinfo{left:14px;right:14px;bottom:74px;max-width:none;}}
+
+
+.svc-grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:1100px){.svc-grid.cols-4{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.svc-grid.cols-4{grid-template-columns:1fr;}}
+
+
+#standort-kacheln .svc h3{white-space:nowrap;font-size:clamp(1.05rem,1.9vw,1.35rem);}
+@media(max-width:400px){#standort-kacheln .svc h3{font-size:1rem;}}
+
+
+/* --- Slide-in Leasing --- */
+#slideleasing{position:fixed;right:18px;bottom:84px;z-index:949;max-width:360px;background:#fff;
+  border:1.5px solid var(--line);border-left:5px solid var(--teal);border-radius:16px;
+  box-shadow:0 24px 54px -20px rgba(34,30,23,.4);padding:20px 20px 18px;
+  opacity:0;visibility:hidden;transform:translateY(16px);transition:all .35s ease;}
+#slideleasing.show{opacity:1;visibility:visible;transform:translateY(0);}
+#slideleasing .si-close{position:absolute;top:8px;right:10px;border:none;background:none;
+  font-size:20px;line-height:1;cursor:pointer;color:var(--ink-soft);padding:4px;}
+#slideleasing .si-tag{font-family:'Spline Sans',sans-serif;font-size:11.5px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--teal);}
+#slideleasing h4{font-family:'Fraunces',serif;font-size:1.08rem;line-height:1.3;margin:6px 0 6px;}
+#slideleasing p{font-size:13.8px;line-height:1.6;color:var(--ink-soft);margin:0 0 8px;}
+#slideleasing a.si-link{font-family:'Spline Sans',sans-serif;font-weight:700;font-size:13.8px;
+  color:var(--terra-deep);}
+@media(max-width:520px){#slideleasing{left:14px;right:14px;bottom:74px;max-width:none;}}
+
 </style>
 </head>
 <body>
@@ -818,10 +903,10 @@ footer ul li a:hover{color:var(--terra);}
     <div class="reveal">
       <span class="eyebrow">Mobile Fahrradwerkstatt im Oberland</span>
       <h1>Wir kommen dahin, wo Ihr <em>Rad</em> steht.</h1>
-      <p class="lead">Unsere Werkstatt steckt in einem umgebauten Foodtruck: donnerstags in Hohenschäftlarn, samstags in Berg am Starnberger See – und an allen anderen Tagen bei Ihnen zu Hause, im Verein oder in der Firma. Markenunabhängig, vom Klassiker bis zum High-End-E-Bike.</p>
+      <p class="lead">Unsere Werkstatt steckt in einem umgebauten Foodtruck: donnerstags in Hohenschäftlarn, freitags in Icking (neu), samstags in Berg am Starnberger See – und an allen anderen Tagen bei Ihnen zu Hause, im Verein oder in der Firma. Markenunabhängig, vom Klassiker bis zum High-End-E-Bike.</p>
       <a href="standorte.html" class="announce">
         <span class="a-badge">FEST</span>
-        📍 Donnerstag Schäftlarn · Samstag Berg — alle Termine ansehen
+        📍 Vier feste Standorte pro Woche — alle Termine
       </a>
       <div class="hero-cta">
         <a href="standorte.html" class="btn btn-primary">Standorte &amp; Termine →</a>
@@ -840,10 +925,6 @@ footer ul li a:hover{color:var(--terra);}
           <span class="bike-card-float">Komplett-Service 90 €</span>
         </div>
         <div class="bike-card-body">
-          <a href="#foodtruck" class="bike-card-foodtruck">
-            <span class="ft-emoji">🚐</span>
-            <span><b>Vom Foodtruck zur Bikewerkstatt</b><span>Die Werkstatt, die zu Ihnen fährt →</span></span>
-          </a>
           <p>Reparatur, Inspektion, E-Bike- und Motor-Check – direkt am Marktstand oder bei Ihnen vor der Haustür. Hol- &amp; Bringdienst im Umkreis von 10 km um Wolfratshausen ohne Anfahrtskosten, darüber hinaus auf Anfrage. 24/7-Notfallnummer inklusive.</p>
           <a href="fahrrad-service.html" class="btn btn-primary" style="width:100%;justify-content:center;">Zum Fahrrad &amp; E-Bike Service →</a>
         </div>
@@ -857,25 +938,31 @@ footer ul li a:hover{color:var(--terra);}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Wo Sie uns treffen</span>
-      <h2>Zwei feste Termine. Und sonst kommen wir.</h2>
+      <h2>Vier feste Termine. Und sonst kommen wir.</h2>
     </div>
-    <div class="svc-grid">
+    <div class="svc-grid cols-2" id="standort-kacheln">
+      <a href="standorte.html" class="svc reveal" style="border-color:#3F7A4F66;">
+        <h3>Mittwoch · Baierbrunn</h3>
+        <p>Auf dem Wochenmarkt, 13:00 – 18:00 Uhr.</p>
+        <span class="price" style="color:#3F7A4F;">Neu ab 23.09.</span>
+      </a>
       <a href="standorte.html" class="svc teal reveal">
-        <h3>Donnerstag · Hohenschäftlarn</h3>
-        <p>Bahnhofsplatz, 14:00 – 18:00 Uhr. Ohne Anmeldung vorbeikommen, Kleinigkeiten machen wir direkt.</p>
+        <h3>Donnerstag · Schäftlarn</h3>
+        <p>Wochenmarkt, Hohenschäftlarn an der S-Bahn, 14:00 – 18:00 Uhr.</p>
+        <span class="price">Jede Woche</span>
+      </a>
+      <a href="standorte.html" class="svc reveal">
+        <h3>Freitag · Icking</h3>
+        <p>Am Gymnasium, 13:00 – 18:00 Uhr.</p>
         <span class="price">Jede Woche</span>
       </a>
       <a href="standorte.html" class="svc mustard reveal">
         <h3>Samstag · Berg bei Starnberg</h3>
-        <p>Strandhotel &amp; Strandbar, Seestraße 17, 09:00 – 14:00 Uhr. Der Check vor der Radltour.</p>
+        <p>Strandhotel &amp; Strandbar, Seestraße 17, 09:00 – 14:00 Uhr.</p>
         <span class="price">Jede Woche</span>
       </a>
-      <a href="standorte.html" class="svc reveal">
-        <h3>Alle anderen Tage · bei Ihnen</h3>
-        <p>Ein E-Bike wiegt locker 25 kg – das muss niemand allein ins Auto wuchten. Kurz anrufen, wir kommen vorbei.</p>
-        <span class="price">Nach Absprache</span>
-      </a>
     </div>
+    <p class="reveal" style="margin-top:20px;color:var(--ink-soft);font-size:15.5px;">…sowie auf Anfrage bei Ihnen – zu Hause, im Verein oder in der Firma. <a href="standorte.html" style="font-weight:700;color:var(--terra-deep);">Alle Termine →</a></p>
   </div>
 </section>
 
@@ -895,8 +982,8 @@ footer ul li a:hover{color:var(--terra);}
 <!-- ===== USP STRIP ===== -->
 <div class="strip">
   <div class="strip-track">
-    <span>Klarheit statt kompliziert</span><span>Fairness statt Überraschung</span><span>Lösungen statt Zuständigkeiten</span><span>Wir halten unsere Termine</span>
-    <span>Klarheit statt kompliziert</span><span>Fairness statt Überraschung</span><span>Lösungen statt Zuständigkeiten</span><span>Wir halten unsere Termine</span>
+    <span>Lastenrad</span><span>Kinderrad</span><span>Mountainbike</span><span>Gravelbike</span><span>E-Bike</span><span>Rennrad</span>
+    <span>Lastenrad</span><span>Kinderrad</span><span>Mountainbike</span><span>Gravelbike</span><span>E-Bike</span><span>Rennrad</span>
   </div>
 </div>
 
@@ -911,7 +998,7 @@ footer ul li a:hover{color:var(--terra);}
     <div class="svc-grid">
       <a href="fahrrad-service.html" class="svc teal reveal">
         <h3>Komplett-Service</h3>
-        <p>Das ganze Rad einmal durch: Bremsen, Schaltung, Antrieb, Laufräder, Licht – geprüft, eingestellt, dokumentiert.</p>
+        <p>Das ganze Rad einmal durch: Bremsen, Schaltung, Antrieb, Laufräder, Licht – geprüft, eingestellt, dokumentiert. Alles darüber hinaus: Kosten nach Rücksprache.</p>
         <span class="price">90 €</span>
       </a>
       <a href="fahrrad-service.html" class="svc reveal">
@@ -964,67 +1051,6 @@ footer ul li a:hover{color:var(--terra);}
         <span>Wir schrauben an allem, was zwei Räder hat – markenunabhängig und ohne Aufschlag für alte Modelle.</span>
       </figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- ===== FOODTRUCK FEATURE ===== -->
-<section class="sec tight" id="foodtruck" style="padding-top:46px;">
-  <div class="wrap">
-    <div class="feat-box reveal">
-      <div class="feat-head">
-        <span class="feat-tag">Jetzt im Einsatz</span>
-        <h2>Vom Foodtruck zur rollenden Bikewerkstatt</h2>
-        <p>Handwerk ist unsere Basis – Bikes sind unsere Leidenschaft. Aus einem alten Foodtruck ist eine rollende Fahrradwerkstatt geworden – und die ist jetzt im Einsatz: donnerstags 14–18 Uhr in Hohenschäftlarn, samstags 9–14 Uhr in Berg am Starnberger See. An allen anderen Tagen kommen wir zu Ihnen: Ein E-Bike wiegt locker 25 kg – das muss niemand allein ins Auto wuchten. Vor-Ort-Service einfach anfragen.</p>
-      </div>
-      <div class="feat-steps">
-        <div class="fstep">
-          <div class="fnum">1</div>
-          <div class="fart">
-            <svg width="120" height="62" viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="14" width="78" height="32" rx="6" fill="#E5A93B"/>
-              <rect x="8" y="14" width="28" height="32" rx="6" fill="#FBF5EA"/>
-              <rect x="42" y="22" width="34" height="14" rx="3" fill="#FBF5EA"/>
-              <circle cx="28" cy="50" r="9" fill="#221E17"/><circle cx="28" cy="50" r="3" fill="#FBF5EA"/>
-              <circle cx="72" cy="50" r="9" fill="#221E17"/><circle cx="72" cy="50" r="3" fill="#FBF5EA"/>
-            </svg>
-          </div>
-          <h3>Der Foodtruck</h3>
-          <p>Wie alles begann – die Idee, das Fahrzeug und der Entschluss zum Umbau.</p>
-        </div>
-        <div class="fstep">
-          <div class="fnum">2</div>
-          <div class="fart">
-            <svg width="120" height="62" viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="14" y="16" width="74" height="30" rx="5" stroke="#FBF5EA" stroke-width="3" fill="none" stroke-dasharray="7 5"/>
-              <path d="M52 8 l5 9 l10 -2 l-6 8 l5 9 l-10 -4 l-8 7 l1 -11 l-9 -6 l10 -2 z" fill="#E5A93B"/>
-              <circle cx="30" cy="50" r="8" fill="#221E17"/><circle cx="72" cy="50" r="8" fill="#221E17"/>
-            </svg>
-          </div>
-          <h3>Der Umbau</h3>
-          <p>Schrauben, planen, ausstatten – aus der Küche wurde eine voll ausgerüstete Werkstatt.</p>
-        </div>
-        <div class="fstep">
-          <div class="fnum">3</div>
-          <div class="fart">
-            <svg width="120" height="62" viewBox="0 0 120 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="12" width="70" height="30" rx="6" fill="#FBF5EA"/>
-              <circle cx="26" cy="48" r="9" fill="#221E17"/><circle cx="26" cy="48" r="3" fill="#FBF5EA"/>
-              <circle cx="62" cy="48" r="9" fill="#221E17"/><circle cx="62" cy="48" r="3" fill="#FBF5EA"/>
-              <circle cx="45" cy="27" r="12" stroke="#2C5B52" stroke-width="3" fill="#E5A93B"/>
-              <circle cx="98" cy="42" r="13" stroke="#FBF5EA" stroke-width="3" fill="none"/>
-              <path d="M91 42 h14 M98 35 v14" stroke="#FBF5EA" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Die mobile Bikewerkstatt</h3>
-          <p>Im Einsatz: donnerstags 14–18 Uhr in Hohenschäftlarn, samstags 9–14 Uhr in Berg – und nach Absprache direkt bei Ihnen.</p>
-        </div>
-      </div>
-      <div class="feat-cta">
-        <a href="fahrrad-service.html" class="btn btn-light">Zum Fahrrad &amp; E-Bike Service →</a>
-        <a href="standorte.html" class="btn btn-ghost light">Standorte &amp; Markttermine →</a>
-        
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1212,7 +1238,7 @@ footer ul li a:hover{color:var(--terra);}
       <div class="news-card reveal">
         <div class="news-date">August 2026</div>
         <h3>Die rollende Werkstatt ist im Einsatz</h3>
-        <p>Der umgebaute Foodtruck steht jetzt fest an zwei Standorten: donnerstags in Hohenschäftlarn, samstags in Berg am Starnberger See. An allen anderen Tagen kommen wir nach Absprache zu Ihnen.</p>
+        <p>Der umgebaute Foodtruck steht jetzt fest an vier Standorten im Oberland. An allen anderen Tagen kommen wir nach Absprache zu Ihnen.</p>
         <a href="standorte.html" class="news-more">Standorte &amp; Termine →</a>
       </div>
 
@@ -1244,7 +1270,7 @@ footer ul li a:hover{color:var(--terra);}
     </div>
     <div class="faq-list">
       <div class="qa reveal"><button>Wo finde ich Sie?<span class="plus">+</span></button>
-        <div class="ans"><p>Donnerstags von 14 bis 18 Uhr am Bahnhofsplatz in Hohenschäftlarn und samstags von 9 bis 14 Uhr beim Strandhotel in Berg am Starnberger See. An allen anderen Tagen kommen wir nach Absprache zu Ihnen.</p></div></div>
+        <div class="ans"><p>Mittwochs von 13 bis 18 Uhr auf dem Wochenmarkt in Baierbrunn (neu ab 23.09.), donnerstags von 14 bis 18 Uhr auf dem Wochenmarkt an der S-Bahn-Station Hohenschäftlarn, freitags von 13 bis 18 Uhr am Gymnasium in Icking und samstags von 9 bis 14 Uhr beim Strandhotel in Berg am Starnberger See. An allen anderen Tagen kommen wir nach Absprache zu Ihnen.</p></div></div>
       <div class="qa reveal"><button>Brauche ich einen Termin?<span class="plus">+</span></button>
         <div class="ans"><p>An den festen Standorten nicht – einfach vorbeikommen. Für den Vor-Ort-Service stimmen wir vorher einen Tag und eine Uhrzeit ab.</p></div></div>
       <div class="qa reveal"><button>Was kostet der Komplett-Service?<span class="plus">+</span></button>
@@ -1508,6 +1534,62 @@ footer ul li a:hover{color:var(--terra);}
 function t(){b.classList.toggle('show',window.scrollY>600);}
 window.addEventListener('scroll',t,{passive:true});t();
 b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();
+</script>
+<div id="slideinfo" role="dialog" aria-label="Aktuelle Information">
+  <button class="si-close" aria-label="Schließen" onclick="siClose()">&times;</button>
+  <div id="si-pause">
+    <span class="si-tag">Kurze Info</span>
+    <h4>Diese Woche stehen wir nicht an den gewohnten Plätzen.</h4>
+    <p>Telefonisch sind wir voll für Sie erreichbar. Ab <strong>Donnerstag, 17.09.</strong> finden Sie uns wieder wie gewohnt an unseren Standorten. Danke für Ihr Verständnis!</p>
+    <a class="si-link" href="tel:015511441969">📞 0155 11 44 19 69</a>
+  </div>
+  <div class="si-neu" id="si-neu">
+    <span class="si-tag">Neu · ab 23.09.</span>
+    <h4>Jetzt auch in Baierbrunn!</h4>
+    <p>Ab <strong>Mittwoch, 23.09.</strong> jeden Mittwoch von 13 bis 18 Uhr auf dem Wochenmarkt. Wir freuen uns auf Sie!</p>
+    <a class="si-link" href="standorte.html">Alle Standorte &amp; Termine →</a>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('slideinfo');if(!box)return;
+  var KEY='kuem-si-0917';
+  var today=new Date(); today.setHours(0,0,0,0);
+  var pauseEnd=new Date(2026,8,17);   /* 17.09.2026: ab da ausblenden */
+  var neuEnd=new Date(2026,9,21);      /* Icking-Hinweis bis 02.10.2026 */
+  var pause=document.getElementById('si-pause');
+  var neu=document.getElementById('si-neu');
+  if(today>=pauseEnd){pause.style.display='none';neu.style.borderTop='none';neu.style.marginTop='0';neu.style.paddingTop='0';}
+  if(today>=neuEnd){neu.style.display='none';}
+  var anyVisible=(today<pauseEnd)||(today<neuEnd);
+  var dismissed=false;
+  try{dismissed=localStorage.getItem(KEY)==='1';}catch(e){}
+  if(anyVisible&&!dismissed){setTimeout(function(){box.classList.add('show');},1200);}
+  window.siClose=function(){box.classList.remove('show');try{localStorage.setItem(KEY,'1');}catch(e){}};
+})();
+</script>
+<div id="slideleasing" role="dialog" aria-label="Hinweis zu Leasingrädern">
+  <button class="si-close" aria-label="Schließen" onclick="slClose()">&times;</button>
+  <span class="si-tag">Psst … schon gewusst?</span>
+  <h4>Wir kümmern uns auch um dein Leasing-Bike.</h4>
+  <p>Egal ob JobRad, BusinessBike, Deutsche Dienstrad oder alle anderen – Service und Inspektion machen wir, abgerechnet wird direkt mit deiner Leasinggesellschaft.</p>
+  <a class="si-link" href="fahrrad-service.html#leasing">Mehr zu Leasingrädern →</a>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('slideleasing');if(!box)return;
+  var KEY='kuem-si-leasing';
+  var dismissed=false;
+  try{dismissed=localStorage.getItem(KEY)==='1';}catch(e){}
+  if(dismissed)return;
+  function tryShow(){
+    var other=document.getElementById('slideinfo');
+    if(other&&other.classList.contains('show')){setTimeout(tryShow,1500);return;}
+    box.classList.add('show');
+  }
+  setTimeout(tryShow,10000);
+  window.slClose=function(){box.classList.remove('show');try{localStorage.setItem(KEY,'1');}catch(e){}};
+})();
 </script>
 </body>
 </html>
