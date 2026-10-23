@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.dein-kuemmerer.de/sitemap.xml
